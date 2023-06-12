@@ -1,0 +1,53 @@
+/* CSS para a página Home */
+
+  
+  .container {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav li {
+    margin-bottom: 10px;
+  }
+  
+  nav a {
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #00a8e8;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    text-align: center;
+  }
+  
+  nav a:hover {
+    background-color: #007ab8;
+  }
+
+  .voltar {
+    display: block;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #f48626;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    max-width: 50px;
+  }
+  
+  

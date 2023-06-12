@@ -1,19 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
-import Letreiro from './components/Letreiro';
-import MyApp from './components/MyApp';
-import MyButton from './components/MyButton';
-import Gallery from './components/Gallery';
-
+import MinhasRotas from "./minhasRotas";
+/*List3-List4-BucketList */
 
 function App() {
   return (
-      <div className='App'>
-        <Letreiro />
-        <MyButton />
-        <MyApp /> 
-        <Gallery />
-      </div>
+    <MinhasRotas />
   );
 }
 
