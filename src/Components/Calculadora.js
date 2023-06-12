@@ -1,46 +1,53 @@
 import React, { useState } from 'react';
 
 const Calculadora = () => {
-  const [displayValue, setDisplayValue] = useState('0');
+  const [valorVisor, setValorVisor] = useState('0');
 
-  const handleButtonClick = (value) => {
-    setDisplayValue((prevDisplayValue) => {
-      if (prevDisplayValue === '0' && value !== '.') {
-        return value;
-      }
-      return prevDisplayValue + value;
-    });
-  };
-
-  const calculateResult = () => {
-    try {
-      const result = eval(displayValue);
-      setDisplayValue(result.toString());
-    } catch (error) {
-      setDisplayValue('Error');
+  const handleClick = (valor) => {
+    if (valorVisor === '0') {
+      setValorVisor(valor);
+    } else {
+      setValorVisor(valorVisor + valor);
     }
   };
 
-  const clearDisplay = () => {
-    setDisplayValue('0');
+  const calcularResultado = () => {
+    try {
+      const resultado = eval(valorVisor);
+      setValorVisor(resultado.toString());
+    } catch (error) {
+      setValorVisor('Erro');
+    }
+  };
+
+  const limparVisor = () => {
+    setValorVisor('0');
   };
 
   return (
-    <div className="Calculadora">
-      <div className="display">{displayValue}</div>
+    <div className="calculator">
+      <div className="display">{valorVisor}</div>
       <div className="buttons">
-        {[7, 8, 9, '+', 4, 5, 6, '-', 1, 2, 3, '*', 0, '.', '=', '/'].map((value) => (
-          <button key={value} className="button" onClick={() => handleButtonClick(value)}>
-            {value}
-          </button>
-        ))}
-        <button className="button" onClick={clearDisplay}>
-          C
-        </button>
+        <button className="button" onClick={() => handleClick('7')}>7</button>
+        <button className="button" onClick={() => handleClick('8')}>8</button>
+        <button className="button" onClick={() => handleClick('9')}>9</button>
+        <button className="button" onClick={() => handleClick('+')}>+</button>
+        <button className="button" onClick={() => handleClick('4')}>4</button>
+        <button className="button" onClick={() => handleClick('5')}>5</button>
+        <button className="button" onClick={() => handleClick('6')}>6</button>
+        <button className="button" onClick={() => handleClick('-')}>-</button>
+        <button className="button" onClick={() => handleClick('1')}>1</button>
+        <button className="button" onClick={() => handleClick('2')}>2</button>
+        <button className="button" onClick={() => handleClick('3')}>3</button>
+        <button className="button" onClick={() => handleClick('*')}>*</button>
+        <button className="button" onClick={() => handleClick('0')}>0</button>
+        <button className="button" onClick={() => handleClick('.')}>.</button>
+        <button className="button" onClick={() => calcularResultado()}>=</button>
+        <button className="button" onClick={() => handleClick('/')}>/</button>
+        <button className="button" onClick={() => limparVisor()}>C</button>
       </div>
     </div>
   );
 };
 
 export default Calculadora;
-
