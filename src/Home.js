@@ -26,6 +26,9 @@ const Home = () => {
           <li>
             <Link to="/Atv06">Atividade 06: Calculadora</Link>
           </li>
+          <li>
+               <a href="https://github.com/prinoriko/Projeto-React" target="_blank" class="btn btn-primary">Acessar pagina no github</a>
+          </li>       
         </ul>
       </nav>
     </div>
