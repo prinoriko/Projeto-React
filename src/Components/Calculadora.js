@@ -11,14 +11,6 @@ function Calculadora() {
         newDisplay = '0';
         break;
       case '=':
-        try {
-          newDisplay = eval(display).toString();
-        } catch (error) {
-          newDisplay = 'Error';
-        }
-        break;
-      case '±':
-        newDisplay = (parseFloat(display) * -1).toString();
         break;
       default:
         newDisplay = display === '0' ? value : display + value;
