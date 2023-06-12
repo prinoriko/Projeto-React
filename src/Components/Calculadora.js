@@ -4,11 +4,28 @@ function Calculadora() {
   const [display, setDisplay] = useState('0');
 
   const handleButtonClick = (value) => {
-    setDisplay(display === '0' ? value : display + value);
-  };
+    let newDisplay = display;
 
-  const clearDisplay = () => {
-    setDisplay('0');
+    switch (value) {
+      case 'C':
+        newDisplay = '0';
+        break;
+      case '=':
+        try {
+          newDisplay = eval(display).toString();
+        } catch (error) {
+          newDisplay = 'Error';
+        }
+        break;
+      case '±':
+        newDisplay = (parseFloat(display) * -1).toString();
+        break;
+      default:
+        newDisplay = display === '0' ? value : display + value;
+        break;
+    }
+
+    setDisplay(newDisplay);
   };
 
   const handleDecimalClick = () => {
@@ -26,7 +43,7 @@ function Calculadora() {
             {value}
           </button>
         ))}
-        <button className="button" onClick={clearDisplay}>
+        <button className="button" onClick={() => handleButtonClick('C')}>
           C
         </button>
       </div>
