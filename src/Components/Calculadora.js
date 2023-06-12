@@ -3,20 +3,6 @@ import React, { useState } from 'react';
 function Calculadora() {
   const [display, setDisplay] = useState('0');
 
-  const handleButtonClick = (value) => {
-    let newDisplay = display;
-
-    switch (value) {
-      case 'AC':
-        newDisplay = '0';
-        break;
-      case '=':
-        break;
-      default:
-        newDisplay = display === '0' ? value : display + value;
-        break;
-    }
-
     setDisplay(newDisplay);
   };
 
