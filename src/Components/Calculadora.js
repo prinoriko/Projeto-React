@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 function Calculadora() {
   const [display, setDisplay] = useState('0');
 
-    setDisplay(newDisplay);
-  };
+
 
   const handleDecimalClick = () => {
     if (!display.includes('.')) {
@@ -27,6 +26,7 @@ function Calculadora() {
       </div>
     </div>
   );
+};
 };
 
 export default Calculadora;
