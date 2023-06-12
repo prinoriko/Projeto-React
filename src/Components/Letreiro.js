@@ -22,7 +22,6 @@ function Frase() {
 
   return (
     <div>
-    <p>Exercício 2 - Letreiro</p>
       <h3>{substring}</h3>
     </div>
   );
