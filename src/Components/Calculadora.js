@@ -3,7 +3,13 @@ import React, { useState } from 'react';
 function Calculadora() {
   const [display, setDisplay] = useState('0');
 
+  const handleButtonClick = (value) => {
+    setDisplay(display === '0' ? value : display + value);
+  };
 
+  const clearDisplay = () => {
+    setDisplay('0');
+  };
 
   const handleDecimalClick = () => {
     if (!display.includes('.')) {
@@ -13,7 +19,7 @@ function Calculadora() {
 
   return (
     <div className="Calculadora">
-      <div className="display">{displayValue}</div>
+      <div className="display">{display}</div>
       <div className="buttons">
         {[7, 8, 9, '+', 4, 5, 6, '-', 1, 2, 3, '*', 0, '.', '=', '/'].map((value) => (
           <button key={value} className="button" onClick={() => handleButtonClick(value)}>
@@ -26,7 +32,6 @@ function Calculadora() {
       </div>
     </div>
   );
-};
-};
+}
 
 export default Calculadora;
