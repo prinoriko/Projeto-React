@@ -1,50 +1,73 @@
-  .container {
-    font-family: Arial, sans-serif;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
+.container {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin-bottom: 10px;
+}
+
+nav a {
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #cd00e8;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #b200cf;
+}
+
+.voltar {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: #226d00;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  max-width: 100px;
+  text-transform: uppercase;
+}
+
+.voltar:hover {
+  background-color: #1f5d00;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
   h1 {
-    font-size: 36px;
-    text-align: center;
+    font-size: 24px;
   }
-  
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav li {
-    margin-bottom: 10px;
-  }
-  
+
   nav a {
-    display: block;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #cd00e8;
-    color: #ffffff;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    text-align: center;
-  }
-  
-  nav a:hover {
-    background-color: #cd00e8;
+    padding: 8px;
+    font-size: 14px;
   }
 
   .voltar {
-    display: block;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: #226d00;
-    color: #ffffff;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    text-align: center;
-    max-width: 50px;
+    padding: 6px 12px;
+    font-size: 12px;
+    max-width: 80px;
   }
-  
-  
+}
