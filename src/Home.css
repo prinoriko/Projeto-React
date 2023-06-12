@@ -1,4 +1,3 @@
-
 .container {
   font-family: Arial, sans-serif;
   max-width: 800px;
@@ -8,6 +7,11 @@
 
 h1 {
   font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+nav {
   text-align: center;
 }
 
@@ -22,28 +26,27 @@ nav li {
 }
 
 nav a {
-  display: block;
-  padding: 10px;
+  display: inline-block;
+  padding: 10px 20px;
   border-radius: 5px;
   background-color: #00a8e8;
   color: #ffffff;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  text-align: center;
 }
 
 nav a:hover {
   background-color: #007ab8;
 }
 
-.voltar {
-  display: inline-block;
-  padding: 5px;
-  border-radius: 5px;
-  background-color: #f48626;
-  color: #ffffff;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  text-align: center;
-  max-width: 50px;
-}
+  .voltar {
+    display: block;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #226d00;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    max-width: 50px;
+  }
