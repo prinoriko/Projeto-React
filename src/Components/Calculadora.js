@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
 function Calculadora() {
-  const [display, setDisplay] = useState('0');
+ const [display, setDisplay] = useState('0');
 
   const handleButtonClick = (value) => {
     let newDisplay = display;
 
     switch (value) {
-      case 'C':
+      case 'AC':
         newDisplay = '0';
         break;
       case '=':
@@ -16,9 +16,6 @@ function Calculadora() {
         } catch (error) {
           newDisplay = 'Error';
         }
-        break;
-      case '±':
-        newDisplay = (parseFloat(display) * -1).toString();
         break;
       default:
         newDisplay = display === '0' ? value : display + value;
