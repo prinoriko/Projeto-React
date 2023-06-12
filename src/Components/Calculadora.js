@@ -20,9 +20,6 @@ function Calculadora() {
       case '±':
         newDisplay = (parseFloat(display) * -1).toString();
         break;
-      case '⌫':
-        newDisplay = display.slice(0, -1);
-        break;
       default:
         newDisplay = display === '0' ? value : display + value;
         break;
