@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function PeopleCounter() {
+function ContadorPessoas() {
   const [counters, setCounters] = useState({
     homens: 0,
     mulheres: 0,
@@ -37,4 +37,4 @@ function PeopleCounter() {
   );
 }
 
-export default PeopleCounter;
+export default ContadorPessoas;
