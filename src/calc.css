@@ -1,65 +1,88 @@
 .Calculadora {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 300px;
-  background-color: #f2f2f2;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
+  max-width: 320px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .display {
-  width: 100%;
   background-color: #fff;
   border: 1px solid #ccc;
-  border-radius: 3px;
-  padding: 5px;
-  margin-bottom: 10px;
+  border-radius: 4px;
+  padding: 16px;
+  font-size: 36px;
   text-align: right;
-  font-size: 20px;
+  margin-bottom: 16px;
 }
 
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 5px;
+  gap: 8px;
+  padding: 16px;
 }
 
 .button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  background-color: #eaeaea;
-  border: none;
-  border-radius: 3px;
-  font-size: 18px;
+  padding: 16px;
+  font-size: 24px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .button:hover {
-  background-color: #ccc;
+  background-color: #e0e0e0;
 }
 
 .button:active {
-  background-color: #bbb;
+  background-color: #d0d0d0;
 }
 
-.button:last-child {
-  grid-column: span 2;
+.button:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
 }
 
-.button:nth-child(4n) {
-  background-color: #f5923e;
+.button.operator {
+  background-color: #ff9800;
   color: #fff;
 }
 
-.button:nth-child(4n):hover {
-  background-color: #db7e32;
+.button.operator:hover {
+  background-color: #f57c00;
 }
 
-.button:nth-child(4n):active {
-  background-color: #c26e2a;
+.button.operator:active {
+  background-color: #e65100;
 }
+
+.button.equal {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.button.equal:hover {
+  background-color: #388e3c;
+}
+
+.button.equal:active {
+  background-color: #1b5e20;
+}
+
+.button.clear {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.button.clear:hover {
+  background-color: #c62828;
+}
+
+.button.clear:active {
+  background-color: #8e0000;
+}
+
