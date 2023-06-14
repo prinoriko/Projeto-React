@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 function Calculadora() {
- const [display, setDisplay] = useState('0');
+  const [display, setDisplay] = useState('0');
 
   const handleButtonClick = (value) => {
-    let newDisplay = display;
+    let newDisplay;
 
     switch (value) {
       case 'AC':
@@ -16,6 +16,9 @@ function Calculadora() {
         } catch (error) {
           newDisplay = 'Error';
         }
+        break;
+      case 'C':
+        newDisplay = '0';
         break;
       default:
         newDisplay = display === '0' ? value : display + value;
@@ -40,7 +43,7 @@ function Calculadora() {
             {value}
           </button>
         ))}
-        <button className="button" onClick={() => handleButtonClick('0')}>
+        <button className="button" onClick={() => handleButtonClick('C')}>
           C
         </button>
       </div>
