@@ -40,7 +40,7 @@ function Calculadora() {
             {value}
           </button>
         ))}
-        <button className="button" onClick={() => handleButtonClick('C')}>
+        <button className="button" onClick={() => handleButtonClick('0')}>
           C
         </button>
       </div>
